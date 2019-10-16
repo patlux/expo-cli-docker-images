@@ -6,6 +6,5 @@ RUN npm install --global expo-cli@${EXPO_VERSION}
 
 COPY entrypoint.sh /
 
-USER node
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["--help"]
