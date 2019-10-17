@@ -43,3 +43,9 @@ docker run \
 
 Success. You are now logged in as patwoz.
 ```
+
+## Publish
+
+```bash
+docker publish -t patwoz/expo-cli
+```
