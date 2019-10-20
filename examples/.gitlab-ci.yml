@@ -1,0 +1,31 @@
+# This is a example for the gitlab ci.
+# It will publish your app with the help of expo
+# on each push in the master branch.
+
+---
+image: patwoz/expo-cli:3
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+stages:
+  - lint
+  - publish
+
+before_script:
+  - yarn install --pure-lockfile --non-interactive
+
+lint:
+  stage: lint
+  script:
+    - yarn run lint
+
+expo-publish:
+  stage: publish
+  script:
+    - expo login --non-interactive -u "$EXPO_CLI_USERNAME"
+    - expo publish --non-interactive
+  only:
+    - master

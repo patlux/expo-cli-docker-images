@@ -2,6 +2,10 @@
 
 Docker images with preinstalled `expo-cli` based on the node images.
 
+## Examples
+
+You can find some usage examples in the `examples/` folder.
+
 ## Build
 
 ```bash
