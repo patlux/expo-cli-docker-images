@@ -64,5 +64,5 @@ docker run -e "EXPO_CLI_PASSWORD=password" -t patwoz/expo-cli expo login --non-i
 ## Publish
 
 ```bash
-docker publish -t patwoz/expo-cli
+docker push -t patwoz/expo-cli
 ```
