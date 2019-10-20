@@ -2,6 +2,12 @@
 # It will publish your app with the help of expo
 # on each push in the master branch.
 
+# IMPORTANT:
+# You need to define the following environment variables
+# in your gitlab interface ("Settings" -> "CI / CD" -> "Variables"):
+# EXPO_CLI_USERNAME
+# EXPO_CLI_PASSWORD
+
 ---
 image: patwoz/expo-cli:3
 
