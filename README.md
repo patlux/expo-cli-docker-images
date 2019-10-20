@@ -1,5 +1,7 @@
 # Docker images for `expo-cli`
 
+![](https://github.com/patlux/expo-cli-docker-images/workflows/Docker%20Image%20CI/badge.svg)
+
 Docker images with preinstalled `expo-cli` based on the node images.
 
 ## Examples
