@@ -42,6 +42,9 @@ docker run \
   expo login --non-interactive --username="patwoz"
 
 Success. You are now logged in as patwoz.
+
+# copy friendly
+docker run -e "EXPO_CLI_PASSWORD=password" -t patwoz/expo-cli expo login --non-interactive --username="patwoz"
 ```
 
 ## Publish
