@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Build the Docker image
-        run: docker build . --build-arg EXPO_VERSION=3 -t patwoz/expo-cli
+        run: docker build . --build-arg EXPO_VERSION=3 -t patwoz/expo-cli:3
       - name: Login to docker hub
         run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
       - name: Publish to docker registry
