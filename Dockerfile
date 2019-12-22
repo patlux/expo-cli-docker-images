@@ -11,6 +11,5 @@ RUN apk add --no-cache bash git \
 
 COPY entrypoint.sh /
 
-USER node
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["--help"]
