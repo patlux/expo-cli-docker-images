@@ -6,9 +6,11 @@ Docker images with preinstalled `expo-cli` based on the node images.
 
 ## Available docker images
 
-| image:TAG           | node version | expo version | size    |
-| ------------------- | ------------ | ------------ | ------- |
-| `patwoz/expo-cli:3` | `lts-alpine` | `latest`     | ~100 mb |
+| image:TAG                | node version | expo version | size    |
+| ------------------------ | ------------ | ------------ | ------- |
+| `patwoz/expo-cli:3`      | `lts-alpine` | `3`          | ~100 mb |
+| `patwoz/expo-cli:4`      | `lts-alpine` | `4`          | ~100 mb |
+| `patwoz/expo-cli:latest` | `lts-alpine` | `latest`     | ~100 mb |
 
 You can find the docker images in the [official docker registry](https://hub.docker.com/r/patwoz/expo-cli).
 
