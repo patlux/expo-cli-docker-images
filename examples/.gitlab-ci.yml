@@ -7,9 +7,11 @@
 # in your gitlab interface ("Settings" -> "CI / CD" -> "Variables"):
 # EXPO_CLI_USERNAME
 # EXPO_CLI_PASSWORD
+# or
+# EXPO_TOKEN (you need at least expo-cli v4)
 
 ---
-image: patwoz/expo-cli:3
+image: patwoz/expo-cli:4
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}
@@ -22,6 +24,7 @@ stages:
 
 before_script:
   - yarn install --pure-lockfile --non-interactive
+  - sysctl fs.inotify.max_user_watches=524288 && sysctl -p
 
 lint:
   stage: lint
