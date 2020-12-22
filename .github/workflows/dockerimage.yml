@@ -11,11 +11,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        expo-version: [latest, 3, 4]
+
     steps:
       - uses: actions/checkout@v1
-      - name: Build the Docker image
-        run: docker build . --build-arg EXPO_VERSION=3 -t patwoz/expo-cli:3
+      - name: Build the Docker image with Expo v${{ matrix.expo-version }}
+        run: docker build . --build-arg EXPO_VERSION=${{ matrix.expo-version }} -t patwoz/expo-cli:${{ matrix.expo-version }}
       - name: Login to docker hub
         run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
       - name: Publish to docker registry
-        run: docker push patwoz/expo-cli:3
+        run: docker push patwoz/expo-cli:${{ matrix.expo-version }}
